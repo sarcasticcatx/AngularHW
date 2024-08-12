@@ -1,0 +1,30 @@
+.list {
+    width: 300px;
+    padding: 5px 15px;
+    margin: 10px 3px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid rgb(82, 34, 34);
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .new {
+    background-color: #108b04;
+    color: rgb(163, 160, 163);
+  }
+  
+  .in-progress {
+    background-color: #085a0f;
+    color: rgb(138, 129, 138);
+  }
+  
+  .done {
+    background-color: #3cc505;
+    color: rgb(82, 60, 82);
+  }
+  
+  p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

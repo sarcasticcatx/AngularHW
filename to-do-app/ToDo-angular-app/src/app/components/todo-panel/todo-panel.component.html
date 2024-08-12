@@ -1,0 +1,17 @@
+<div class="todo-panel">
+  <div class="panel-controls">
+    <button (click)="filteredListByStatus(todoStatus.NEW)">new</button>
+    <button (click)="filteredListByStatus(todoStatus.IN_PROGRESS)">in progress</button>
+    <button (click)="filteredListByStatus(todoStatus.DONE)">done</button>
+    <button (click)="filteredList.set(todoList())" > go back</button>
+  </div>
+  <div class="panel-container">
+    <div class="todo-list">
+      @for (list of filteredList(); track list.id) {
+      <app-todo [list]="list" (todoOutput)="onTodoSelect($event)" />
+    }
+    </div>
+    <app-todo-details
+    [selectedList]="selectedList()" />
+  </div>
+</div>

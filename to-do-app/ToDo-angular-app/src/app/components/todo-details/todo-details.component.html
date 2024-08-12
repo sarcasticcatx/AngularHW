@@ -1,0 +1,15 @@
+<div class="todo-details">
+  @if (selectedList()) {
+  <h3>Desc: {{ selectedList().description }}</h3>
+  <p>
+    <strong> Assigned To: {{ selectedList().assignedTo }}</strong>
+  </p>
+  <p>
+    <strong [ngClass]="selectedList().status">
+      Status: {{ selectedList().status }}
+    </strong>
+  </p>
+  <button (click)="onClearClick()" class="btn">clear</button>
+}
+<p> click on them to check their status</p>
+</div>

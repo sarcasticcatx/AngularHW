@@ -1,0 +1,32 @@
+.todo-details {
+    border: 2px solid rgb(105, 4, 4);
+    padding: 10px;
+    margin: 10px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: rgb(245, 205, 211);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  .new {
+    color: #06a10e;
+    text-transform: uppercase;
+  }
+  
+  .in-progress {
+    color: #b1a508;
+    text-transform: uppercase;
+  }
+  
+  .done {
+    color: #2d30c9;
+    text-transform: uppercase;
+  }
+  
+.btn {
+    min-width: 100px;
+      transition: 0.15s;
+      border: 1px solid rgb(207, 155, 155);
+      padding: 5px 0;
+      background-color: rgb(219, 219, 216);
+}
