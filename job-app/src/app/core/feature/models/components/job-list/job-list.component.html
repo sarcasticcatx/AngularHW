@@ -1,0 +1,11 @@
+<section class="list-container">
+  <div class="list-jobs">
+    <ul>
+      @for(job of jobs(); track job.id) {
+      <li style="text-decoration: none;" (click)="onJobSelect(job)">
+        <app-job-item [jobs]="job"/>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

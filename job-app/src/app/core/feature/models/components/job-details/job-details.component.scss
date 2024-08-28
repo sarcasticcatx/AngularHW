@@ -1,0 +1,28 @@
+.panel-containers {
+  display: flex;
+  justify-content: flex-end;
+  color: #9b8ab4;
+  text-align: center;
+   
+   
+  .info-panel-container {
+   background-color: #564a94;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+
+    h2 {
+      font-size: 30px;
+      color: #45B0D2;
+      margin: 10px;
+    }
+    h3 {
+        margin: 10px;
+    }
+
+    .sorting-container {
+      margin: 10px;
+      padding: 10px;
+    }
+  }
+}

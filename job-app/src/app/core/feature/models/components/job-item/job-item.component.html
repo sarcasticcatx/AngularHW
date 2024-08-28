@@ -1,0 +1,39 @@
+<main>
+  <section class="jobs-containers">
+    <h2 style="font-size: 30px">
+      We are looking for: {{ this.jobs()?.position || "no position required" }}
+    </h2>
+    <h3>Company: {{ jobs()?.company || "no company required" }}</h3>
+
+    <h3>Expires: {{ jobs()?.expires | date : "fullDate" }}</h3>
+
+    <h3></h3>
+    <h3>
+      Starting Salary:
+      {{ jobs()?.startingSalary | currency : "EUR" || "no salary available" }}
+    </h3>
+    <h3>Work type: {{ jobs().workType }}</h3>
+
+    <div
+      appToggleReadMore
+      [isInititiallyOpen]="false"
+      class="read-more-container"
+    >
+      <!-- put a cursor -->
+      <h4>read more about this job</h4>
+      <div class="read-more">
+        <p>Location: {{ jobs().location }}</p>
+        <p>Country: {{ jobs().country }}</p>
+        <p>Qualifications: {{ jobs().qualifications }}</p>
+        <p>
+          Description: {{ jobs()?.description || "no description available" }}
+        </p>
+        <p>isApplied: {{ jobs().isApplied }}</p>
+      </div>
+    </div>
+    <apply-button
+      text="Apply"
+      [style]="{ backgroundColor: '#45B0D2', fontSize: '20px', border: 'none' }"
+    />
+  </section>
+</main>
