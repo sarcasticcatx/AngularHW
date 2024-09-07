@@ -1,0 +1,17 @@
+<div class="panel-containers">
+  <h2>
+    Information Panel
+    <h3>Available Jobs: {{totsJobsLength}} </h3>
+    <h3>Applied Jobs: {{totalAppliedJobs()}}</h3>
+
+  </h2>
+  <div >
+    @for(jobs of plswork(); track jobs.id) {
+      <app-applied-job-list [appliedJob] = "jobs" />
+    }
+  </div>
+  <h2>
+    Sorting Panel
+
+  </h2>
+</div>

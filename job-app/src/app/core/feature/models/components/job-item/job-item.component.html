@@ -1,13 +1,12 @@
 <main>
-  <section class="jobs-containers">
+  <section class="container">
     <h2 style="font-size: 30px">
-      We are looking for: {{ this.jobs()?.position || "no position required" }}
+      {{ this.jobs()?.position || "no position required" }}
     </h2>
     <h3>Company: {{ jobs()?.company || "no company required" }}</h3>
 
     <h3>Expires: {{ jobs()?.expires | date : "fullDate" }}</h3>
 
-    <h3></h3>
     <h3>
       Starting Salary:
       {{ jobs()?.startingSalary | currency : "EUR" || "no salary available" }}
@@ -19,7 +18,6 @@
       [isInititiallyOpen]="false"
       class="read-more-container"
     >
-      <!-- put a cursor -->
       <h4>read more about this job</h4>
       <div class="read-more">
         <p>Location: {{ jobs().location }}</p>
@@ -28,12 +26,19 @@
         <p>
           Description: {{ jobs()?.description || "no description available" }}
         </p>
-        <p>isApplied: {{ jobs().isApplied }}</p>
       </div>
     </div>
-    <apply-button
+    <apply-cancel-button
+      (btnClick)="onClickApply('Apply')"
       text="Apply"
-      [style]="{ backgroundColor: '#45B0D2', fontSize: '20px', border: 'none' }"
+      [style]="{ backgroundColor: 'yellow', fontSize: '20px', border: 'none' }" 
     />
+    <apply-cancel-button
+      (btnClick)="onClickCancel('Cancel')"
+      text="Cancel"
+      [style]="{ backgroundColor: 'green', fontSize: '20px', border: 'none', }"
+    />
+   
   </section>
 </main>
+

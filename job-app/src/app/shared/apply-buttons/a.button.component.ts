@@ -2,13 +2,13 @@ import { NgStyle } from "@angular/common";
 import { Component, Input, input, output } from "@angular/core";
 
 @Component({
-    selector: 'apply-button',
+    selector: 'apply-cancel-button',
     standalone: true,
     imports: [NgStyle],
     templateUrl: "./a.button.component.html",
     styleUrl: "./a.button.component.css"
 })
-export class ApplyButtonComponent {
+export class ApplyOrCancelButtonComponent {
 text = input.required<string>();
 btnClick = output();
 style = input<{[key: string]: string}>({});

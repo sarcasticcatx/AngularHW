@@ -6,7 +6,8 @@ import { JobsMock } from '../feature/models/job.mock';
   providedIn: 'root',
 })
 export class JobService {
-  jobs = signal<JobApplication[]>([]);
+  //all jobs
+  jobs = signal<JobApplication[]>(JobsMock);
 
   jobSelection = signal<JobApplication>(null);
 
@@ -14,28 +15,61 @@ export class JobService {
     console.log('job select called', this.jobSelection);
     this.jobSelection.set(jobs);
   }
-//how many are applied to
-  totalJobs = computed(() => this.jobs().filter((job) => job.isApplied).length);
+  //how many are applied to
+  totalAppliedJobs = computed(() => this.jobs().filter((job) => job.isApplied).length);
 
-  // applyOrCancelJob(type: 'Apply' | 'Cancel', movieId: number) {
-  //   this.jobs.update((prevJobs) =>
-  //     prevJobs.map((job) => {
-  //       if (job.id === movieId) {
-  //         return {
-  //           ...job,
-  //           isApplied:
-  //             type === 'Apply' ? job.isApplied : job.isApplied ,
-  //         };
-  //       }
+  //site available jobs
+  totalAvailableJobs() {
+    return this.jobs().length;
+  }
 
-  //       return job;
-  //     })
-  //   );
-  // }
+  //aplied jobs list 
+  appliedJobs(): JobApplication[] {
+    return this.jobs().filter((job) => job.isApplied);
+  }
+  //sort by salary
+  sortBySalary() {
+    const copyJobsMock = [...this.jobs()];
+
+    copyJobsMock.sort((a, b) => a.startingSalary - b.startingSalary);
+    this.jobs.set(copyJobsMock);
+  }
+//sorty by work type
+  sortByWorkType(value: string) {
+    const copyJobsMock = [...this.jobs()];
+
+    copyJobsMock.filter((job) => job.workType === value);
+    this.jobs.set(copyJobsMock);
+  }
+
+  // apply and cancel
+  apply(type: 'Apply', jobId: number) {
+    this.jobs.update((prevJob) =>
+      prevJob.map((job) => {
+        if (job.id === jobId) {
+          return {
+            ...job,
+            isApplied: type === 'Apply' ? true : false,
+          };
+        }
+        return job;
+      })
+    );
+  }
+
+  cancel(type: 'Cancel', jobId: number) {
+    this.jobs.update((prevJob) =>
+      prevJob.map((job) => {
+        if (job.id === jobId) {
+          return {
+            ...job,
+            isApplied: type === 'Cancel' ? false : true,
+          };
+        }
+        return job;
+      })
+    );
+  }
 }
-// By clicking "apply," the job posting is 
-// then transferred to the applied jobs list,
-//  where it can also be viewed with its details.
-//   The application can be canceled, which will
-//    return the posting to the available jobs list 
-// (use services to handle this functionality).
+
+// ! ako e writable signal mora da ima (vakvi zagradi) dont forget

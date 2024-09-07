@@ -1,14 +1,13 @@
 import { Component, inject, input, OnInit } from '@angular/core';
 import { JobService } from '../../../../services/job.service';
 import { LoggerService } from '../../../../services/logger.service';
-import { JobDetailsComponent } from '../job-details/job-details.component';
 import { JobApplication } from '../../job.model';
 import { JobItemComponent } from '../job-item/job-item.component';
 
 @Component({
   selector: 'app-job-list',
   standalone: true,
-  imports: [JobItemComponent, JobDetailsComponent],
+  imports: [JobItemComponent],
   templateUrl: './job-list.component.html',
   styleUrl: './job-list.component.scss',
 })
@@ -27,4 +26,3 @@ export class JobListComponent implements OnInit {
     this.jobsService.jobSelect(jobs);
   }
 }
-//remeake this without the service in here but with the service for something else

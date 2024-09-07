@@ -15,7 +15,7 @@ export const JobsMock: JobApplication[] = [
     description:
       'Develop and maintain high-performance software applications. Collaborate with cross-functional teams to deliver innovative solutions.',
     isApplied: false,
-    isAvailable: false,
+
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ export const JobsMock: JobApplication[] = [
     description:
       'Create visual concepts for branding and marketing materials. Work with clients to understand their design needs and deliver compelling visuals.',
     isApplied: false,
-    isAvailable: false,
+   
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ export const JobsMock: JobApplication[] = [
       "Master's in Environmental Science, experience in environmental impact assessments",
     description:
       'Conduct research on environmental issues, analyze data, and develop strategies to mitigate environmental impact.',
-    isApplied: true,
+    isApplied: false,
   },
   {
     id: 4,
@@ -75,7 +75,7 @@ export const JobsMock: JobApplication[] = [
     description:
       'Provide patient care, administer medications, and collaborate with doctors to develop treatment plans.',
     isApplied: false,
-    isAvailable: false,
+ 
   },
   {
     id: 6,
@@ -89,7 +89,7 @@ export const JobsMock: JobApplication[] = [
     qualifications: "Bachelor's in Marketing, experience with SEO and PPC",
     description:
       'Develop and implement digital marketing campaigns, analyze performance metrics, and optimize strategies for better results.',
-    isApplied: true,
+    isApplied: false,
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ export const JobsMock: JobApplication[] = [
     qualifications: 'MBA, 5+ years experience in consulting',
     description:
       'Advise clients on business strategies, perform market research, and develop actionable recommendations to improve business performance.',
-    isApplied: true,
+    isApplied: false,
   },
   {
     id: 8,
@@ -118,7 +118,7 @@ export const JobsMock: JobApplication[] = [
       "Master's in Robotics Engineering, experience with robotic systems design",
     description:
       'Design and develop robotic systems, test prototypes, and troubleshoot technical issues.',
-    isApplied: true,
+    isApplied: false,
   },
   {
     id: 9,

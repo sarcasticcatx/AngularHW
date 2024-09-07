@@ -11,5 +11,5 @@ export interface JobApplication {
     qualifications: string;
     description: string;
     isApplied: boolean;
-    isAvailable?: boolean;
+   
 }
