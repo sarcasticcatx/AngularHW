@@ -12,6 +12,7 @@
       {{ jobs()?.startingSalary | currency : "EUR" || "no salary available" }}
     </h3>
     <h3>Work type: {{ jobs().workType }}</h3>
+    <p>Applied : {{jobs().isApplied}}</p>
 
     <div
       appToggleReadMore
@@ -31,13 +32,13 @@
     <apply-cancel-button
       (btnClick)="onClickApply('Apply')"
       text="Apply"
-      [style]="{ backgroundColor: 'yellow', fontSize: '20px', border: 'none' }" 
+      [style]="{ backgroundColor: '#b8b8b8', fontSize: '20px', border: 'none' }" 
     />
     <apply-cancel-button
-      (btnClick)="onClickCancel('Cancel')"
+    (btnClick)="onClickCancel('Cancel')"
       text="Cancel"
-      [style]="{ backgroundColor: 'green', fontSize: '20px', border: 'none', }"
-    />
+      [style]="{ backgroundColor: '#45B0D2', fontSize: '20px', border: 'none', }"
+      /> 
    
   </section>
 </main>

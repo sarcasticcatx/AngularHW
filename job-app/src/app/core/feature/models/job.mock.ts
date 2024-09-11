@@ -1,4 +1,4 @@
-import { JobApplication } from './job.model';
+import { JobApplication, WorkType } from './job.model';
 
 export const JobsMock: JobApplication[] = [
   {
@@ -7,7 +7,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-09-30',
     position: 'Software Engineer',
     startingSalary: 2500,
-    workType: 'Onsite',
+    workType: WorkType.ON_SITE,
     location: 'San Francisco, CA',
     country: 'USA',
     qualifications:
@@ -23,7 +23,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-10-15',
     position: 'Graphic Designer',
     startingSalary: 2000,
-    workType: 'Remote',
+    workType: WorkType.REMOTE,
     location: 'New York, NY',
     country: 'USA',
     qualifications:
@@ -39,7 +39,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-11-01',
     position: 'Environmental Scientist',
     startingSalary: 2000,
-    workType: 'Remote',
+    workType: WorkType.HYBRID,
     location: 'Seattle, WA',
     country: 'USA',
     qualifications:
@@ -54,7 +54,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-10-20',
     position: 'Financial Analyst',
     startingSalary: 2500,
-    workType: 'Hybrid',
+    workType: WorkType.HYBRID,
     location: 'London',
     country: 'UK',
     qualifications: "Bachelor's in Finance, strong analytical skills",
@@ -68,7 +68,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-09-25',
     position: 'Registered Nurse',
     startingSalary: 3000,
-    workType: 'Onsite',
+    workType: WorkType.ON_SITE,
     location: 'Toronto',
     country: 'Canada',
     qualifications: 'RN license, 3+ years of clinical experience',
@@ -83,7 +83,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-12-01',
     position: 'Digital Marketing Specialist',
     startingSalary: 1500,
-    workType: 'Onsite',
+    workType: WorkType.ON_SITE,
     location: 'Berlin',
     country: 'Germany',
     qualifications: "Bachelor's in Marketing, experience with SEO and PPC",
@@ -97,7 +97,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-11-30',
     position: 'Management Consultant',
     startingSalary: 1100,
-    workType: 'Hybrid',
+    workType: WorkType.HYBRID,
     location: 'Sydney',
     country: 'Australia',
     qualifications: 'MBA, 5+ years experience in consulting',
@@ -111,7 +111,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-10-05',
     position: 'Robotics Engineer',
     startingSalary: 3500,
-    workType: 'Hybrid',
+    workType: WorkType.HYBRID,
     location: 'Tokyo',
     country: 'Japan',
     qualifications:
@@ -126,7 +126,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-11-15',
     position: 'Research Scientist',
     startingSalary: 4000,
-    workType: 'Remote',
+    workType: WorkType.REMOTE,
     location: 'Boston, MA',
     country: 'USA',
     qualifications: 'PhD in Pharmacology, experience in drug development',
@@ -140,7 +140,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-10-10',
     position: 'Data Scientist',
     startingSalary: 3200,
-    workType: 'Onsite',
+    workType: WorkType.ON_SITE,
     location: 'Vancouver',
     country: 'Canada',
     qualifications:
@@ -155,7 +155,7 @@ export const JobsMock: JobApplication[] = [
     expires: '2024-12-20',
     position: 'Civil Engineer',
     startingSalary: 3500,
-    workType: 'Remote',
+    workType: WorkType.REMOTE,
     location: 'Dubai',
     country: 'UAE',
     qualifications:

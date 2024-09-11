@@ -1,7 +1,7 @@
 import { Component, inject, input, OnInit } from '@angular/core';
 import { JobApplication } from '../../job.model';
 import { ToggleReadMoreDirective } from '../../../../directives/toggle-read-more.directive';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgStyle } from '@angular/common';
 import { ShortenPipe } from '../../../../pipes/shorten.pipe';
 import { ApplyOrCancelButtonComponent } from '../../../../../shared/apply-buttons/a.button.component';
 import { JobService } from '../../../../services/job.service';
@@ -9,7 +9,7 @@ import { JobService } from '../../../../services/job.service';
 @Component({
   selector: 'app-job-item',
   standalone: true,
-  imports: [CommonModule, ToggleReadMoreDirective,ShortenPipe, ApplyOrCancelButtonComponent ],
+  imports: [CommonModule, ToggleReadMoreDirective,ShortenPipe, ApplyOrCancelButtonComponent, NgStyle ],
   templateUrl: './job-item.component.html',
   styleUrl: './job-item.component.scss'
 })

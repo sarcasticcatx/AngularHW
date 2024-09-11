@@ -16,8 +16,6 @@ export class AppliedJobListComponent {
   //filterin jobs
   plsworkfilteredjobs = computed(() => this.jobsService.jobs().filter((job) => job.isApplied));
 
-  // ? totalAppliedJobs = inject(JobService).totalAppliedJobs;
-
   appliedJob = input<JobApplication>(null);
 
   onCanceledJobSelect(job: JobApplication) {

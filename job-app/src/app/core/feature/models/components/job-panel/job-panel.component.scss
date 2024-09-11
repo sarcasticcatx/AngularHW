@@ -1,0 +1,88 @@
+/* Panel Container Styling */
+.panel-containers {
+    max-width: 800px; 
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+  }
+  
+
+  .panel-containers h2 {
+    font-size: 28px;
+    color: #333;
+    margin: 0 0 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  
+  .panel-containers h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+
+  .panel-containers button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  .panel-containers button:hover {
+    background-color: #0056b3; 
+  }
+  
+  /* Select Styling */
+  .panel-containers select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+
+  .panel-containers p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+
+  @media (max-width: 600px) {
+    .panel-containers {
+      padding: 15px;
+    }
+  
+    .panel-containers h2 {
+      font-size: 24px;
+    }
+  
+    .panel-containers h3 {
+      font-size: 16px;
+    }
+  
+    .panel-containers button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .panel-containers select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

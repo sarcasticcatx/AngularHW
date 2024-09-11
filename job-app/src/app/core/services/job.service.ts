@@ -16,14 +16,16 @@ export class JobService {
     this.jobSelection.set(jobs);
   }
   //how many are applied to
-  totalAppliedJobs = computed(() => this.jobs().filter((job) => job.isApplied).length);
+  totalAppliedJobs = computed(
+    () => this.jobs().filter((job) => job.isApplied).length
+  );
 
   //site available jobs
   totalAvailableJobs() {
     return this.jobs().length;
   }
 
-  //aplied jobs list 
+  //aplied jobs list
   appliedJobs(): JobApplication[] {
     return this.jobs().filter((job) => job.isApplied);
   }
@@ -34,12 +36,12 @@ export class JobService {
     copyJobsMock.sort((a, b) => a.startingSalary - b.startingSalary);
     this.jobs.set(copyJobsMock);
   }
-//sorty by work type
+  //sort by work type
   sortByWorkType(value: string) {
-    const copyJobsMock = [...this.jobs()];
-
-    copyJobsMock.filter((job) => job.workType === value);
-    this.jobs.set(copyJobsMock);
+    console.log("the value ",value)
+    const filteredJobs = this.jobs().filter((job) => job.workType === value);
+    console.log("filtered version in console" , filteredJobs);
+    this.jobs.set(filteredJobs);
   }
 
   // apply and cancel

@@ -1,4 +1,4 @@
-import { Component, inject, input, OnInit } from '@angular/core';
+import { Component, computed, inject, input, OnInit } from '@angular/core';
 import { JobService } from '../../../../services/job.service';
 import { LoggerService } from '../../../../services/logger.service';
 import { JobApplication } from '../../job.model';
@@ -16,7 +16,7 @@ export class JobListComponent implements OnInit {
   private loggersService = inject(LoggerService);
 
   //the reference to the property in the service
-  jobs = this.jobsService.jobs;
+  jobs = computed(() => this.jobsService.jobs().filter((job) => !job.isApplied))
 
   ngOnInit(): void {
     this.loggersService.logDetails('Jobs List');
