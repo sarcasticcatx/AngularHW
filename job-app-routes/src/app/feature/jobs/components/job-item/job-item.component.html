@@ -1,0 +1,48 @@
+ <main>
+  <section class="container">
+    <h2 style="font-size: 30px">
+      {{ this.jobs()?.position || "no position required" }}
+    </h2>
+    <h3 style="cursor: pointer;" (click)="onCompanySelect(jobs())">Company: {{ jobs()?.company.companyName || "no company required" }}</h3>
+
+    <h3>Expires: {{ jobs()?.expires | date : "fullDate" }}</h3>
+
+    <h3>
+      Starting Salary:
+      {{ jobs()?.startingSalary | currency : "EUR" || "no salary available" }}
+    </h3>
+    <h3>Work type: {{ jobs().workType }}</h3>
+    <p>Applied : {{jobs().isApplied}}</p>
+
+    <div
+      appToggleReadMore
+      [isInititiallyOpen]="false"
+      class="read-more-container"
+    >
+      <h4>read more about this job</h4>
+      <div class="read-more">
+        <p>Location: {{ jobs().location }}</p>
+        <p>Country: {{ jobs().country }}</p>
+        <p>Qualifications: {{ jobs().qualifications }}</p>
+        <p>
+          Description: {{ jobs()?.description || "no description available" }}
+        </p>
+      </div>
+    </div>
+    <apply-cancel-button
+      (btnClick)="onClickApply('Apply')"
+      text="Apply"
+      [style]="{ backgroundColor: '#b8b8b8', fontSize: '20px', border: 'none' }" 
+    />
+    <apply-cancel-button
+    (btnClick)="onClickCancel('Cancel')"
+      text="Cancel"
+      [style]="{ backgroundColor: '#45B0D2', fontSize: '20px', border: 'none', }"
+      /> 
+   
+  </section>
+ 
+  
+</main>
+
+ 

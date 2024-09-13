@@ -1,0 +1,9 @@
+<ul>
+  @for(job of filteredJobs(); track job.id) {
+  <li
+    style="text-decoration: none"
+  >
+    <app-job-item [jobs]="job" />
+  </li>
+  }
+</ul>

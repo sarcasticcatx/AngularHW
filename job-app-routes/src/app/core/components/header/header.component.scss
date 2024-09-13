@@ -1,0 +1,54 @@
+.header {
+  max-width: 800px; 
+  margin: auto;
+  padding: 20px;
+  background-color: #f8efef;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+}
+
+
+.header h1 {
+  font-size: 36px;
+  color: #9c0808a4;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+
+nav {
+
+  display: flex;
+  justify-content: flex-end; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex; 
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 4px;
+  color: #9B8AB4 ;
+  cursor: pointer;
+}
+
+nav .active {
+  background-color: #eadb87;
+  color: #2d3436;
+}

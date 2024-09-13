@@ -1,0 +1,9 @@
+<div class="company-details-container">
+@if(selectedCompany()) {
+    <h3>{{selectedCompany().company.companyName}}</h3>
+}
+@else {
+    <h2>Company not found</h2>
+}
+
+</div>
