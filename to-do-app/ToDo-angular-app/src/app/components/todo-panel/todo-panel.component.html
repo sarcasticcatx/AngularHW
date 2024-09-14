@@ -7,7 +7,9 @@
   </div>
   <div class="panel-container">
     <div class="todo-list">
-      @for (list of filteredList(); track list.id) {
+        <!-- track se koristi za iteracija preku listata na todos i renderiranje na sekoj todo listata
+        za da vrati unikaten indentifikator za sekoj element od spisokot -->
+      @for (list of filteredList(); track list.id ) {
       <app-todo [list]="list" (todoOutput)="onTodoSelect($event)" />
     }
     </div>

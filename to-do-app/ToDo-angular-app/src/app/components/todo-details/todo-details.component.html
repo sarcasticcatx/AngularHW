@@ -5,6 +5,7 @@
     <strong> Assigned To: {{ selectedList().assignedTo }}</strong>
   </p>
   <p>
+    <!-- ova primenuva klasa na osnova na statusot na listata -->
     <strong [ngClass]="selectedList().status">
       Status: {{ selectedList().status }}
     </strong>

@@ -1,0 +1,16 @@
+<main>
+  <app-header />
+  <div class="form-control">
+    <input
+      type="text"
+      class="input"
+      placeholder="Search by title..."
+      (keyup)="onInputChange($event)"
+    />
+  </div>
+  <div class="album-container">
+    @for(album of album | filter: searchValue(); track album.id) {
+    <app-album-card [album]="album" />
+    }
+  </div>
+</main>
