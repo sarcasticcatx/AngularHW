@@ -39,6 +39,9 @@ apply-cancel-button button {
   transition: background-color 0.3s ease;
 }
 
+.apply-cancel-button button:hover {
+  opacity: 0.8;
+}
 
 
 .read-more-container {

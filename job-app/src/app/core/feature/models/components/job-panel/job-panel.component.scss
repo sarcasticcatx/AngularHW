@@ -1,3 +1,4 @@
+
 .panel-containers {
     max-width: 800px; 
     margin: auto;
@@ -57,4 +58,27 @@
   }
   
 
- 
+  @media (max-width: 600px) {
+    .panel-containers {
+      padding: 15px;
+    }
+  
+    .panel-containers h2 {
+      font-size: 24px;
+    }
+  
+    .panel-containers h3 {
+      font-size: 16px;
+    }
+  
+    .panel-containers button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .panel-containers select {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
