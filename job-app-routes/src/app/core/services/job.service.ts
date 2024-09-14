@@ -6,25 +6,22 @@ import { JobsMock } from '../../feature/jobs/models/job.mock';
   providedIn: 'root',
 })
 export class JobService {
-
   //all jobs
   jobs = signal<JobApplication[]>(JobsMock);
 
   jobSelection = signal<JobApplication>(null);
+
+  selectedCompany = signal<JobApplication>(null);
 
   jobSelect(jobs: JobApplication) {
     console.log('job select called', this.jobSelection);
     this.jobSelection.set(jobs);
   }
 
-  selectedCompany = signal<JobApplication>(null)
-
-// get job by id
-getJobById(id: number) {
-// return (this.jobs().find(job => job.id === id)) 
- if(this.selectedCompany()) return
-}
-
+  // get job by id
+  getJobById(id: number) {
+    return this.jobs().find((job) => job.id === id);
+  }
 
   //how many are applied to
   totalAppliedJobs = computed(
@@ -85,4 +82,4 @@ getJobById(id: number) {
   }
 }
 
-// ! ako e writable signal mora da ima (vakvi zagradi) dont forget
+

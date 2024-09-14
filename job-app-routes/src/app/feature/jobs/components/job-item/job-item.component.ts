@@ -8,7 +8,6 @@ import { JobApplication } from '../../models/job.model';
 import { JobPanelComponent } from '../job-panel/job-panel.component';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-job-item',
   standalone: true,
@@ -17,7 +16,7 @@ import { Router } from '@angular/router';
     ToggleReadMoreDirective,
     ShortenPipe,
     ApplyOrCancelButtonComponent,
-    NgStyle, JobPanelComponent
+    NgStyle,
   ],
   templateUrl: './job-item.component.html',
   styleUrl: './job-item.component.scss',
@@ -28,6 +27,7 @@ export class JobItemComponent {
 
   jobs = input.required<JobApplication>();
 
+  selectedCompany = this.jobService.selectedCompany;
 
   onClickApply(type: 'Apply') {
     console.log('apply called');
@@ -40,9 +40,10 @@ export class JobItemComponent {
     this.jobService.cancel(type, this.jobs().id);
   }
 
-  onCompanySelect(jobs: JobApplication) {
+  onCompanySelect(jobs: JobApplication, id: number) {
     this.jobService.jobSelect(jobs);
-    this.router.navigate(['company', jobs.id])
+    this.selectedCompany.set(jobs);
+    this.router.navigate(['company', id]);
+    console.log('id', id);
   }
-
 }

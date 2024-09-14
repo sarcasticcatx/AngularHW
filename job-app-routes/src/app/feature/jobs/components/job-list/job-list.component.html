@@ -1,16 +1,37 @@
-
 <section class="list-container">
- 
+  <div class="available-job">
+    <h3>All the available jobs: {{ totsJobsLength }}</h3>
+
+    <div class="sort-panel">
+      <h2>Sorting Panel</h2>
+      <button (click)="sortBySalary()">low to high sort salary</button>
+      <br />
+      <select (change)="sortByWorkType($event)">
+        <option [value]="workTypeStatus.HYBRID">Hybrid</option>
+        <option [value]="workTypeStatus.REMOTE">Remote</option>
+        <option [value]="workTypeStatus.ON_SITE">On Site</option>
+      </select>
+    </div>
+
+    <div class="search">
+      <input
+        [(ngModel)]="searchValue"
+        type="text"
+        class="search-box"
+        placeholder="Search for jobs...."
+      />
+      <div></div>
+    </div>
+  </div>
+
   <div class="list-jobs">
     <ul>
-      @for(job of jobs(); track job.id) {
+      @for(job of jobs() | filter: searchValue(); track job.id) {
+
       <li style="text-decoration: none" (click)="onJobSelect(job)">
         <app-job-item [jobs]="job" />
       </li>
       }
     </ul>
   </div>
-
 </section>
-
-

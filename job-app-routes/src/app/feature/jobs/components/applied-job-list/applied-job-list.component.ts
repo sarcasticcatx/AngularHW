@@ -7,7 +7,7 @@ import { JobPanelComponent } from '../job-panel/job-panel.component';
 @Component({
   selector: 'app-applied-job-list',
   standalone: true,
-  imports: [JobItemComponent,JobPanelComponent],
+  imports: [JobItemComponent, JobPanelComponent],
   templateUrl: './applied-job-list.component.html',
   styleUrl: './applied-job-list.component.scss',
 })
@@ -15,10 +15,9 @@ export class AppliedJobListComponent {
   private jobsService = inject(JobService);
 
   //filterin jobs
- filteredJobs = computed(() =>
+  filteredJobs = computed(() =>
     this.jobsService.jobs().filter((job) => job.isApplied)
   );
-
 
   onCanceledJobSelect(job: JobApplication) {
     this.jobsService.cancel('Cancel', job.id);

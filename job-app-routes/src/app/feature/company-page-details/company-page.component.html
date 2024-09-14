@@ -1,9 +1,11 @@
 <div class="company-details-container">
-@if(selectedCompany()) {
-    <h3>{{selectedCompany().company.companyName}}</h3>
-}
-@else {
-    <h2>Company not found</h2>
-}
-
+  @if(selectedCompany()) {
+  <h1> {{ selectedCompany().company.companyName }}</h1>
+  <h3> Owners: {{ selectedCompany().company.owners }}</h3>
+  <h3> Email: {{ selectedCompany().company.email }}</h3>
+  <h3> Where to find us: {{ selectedCompany().company.companyAdress }}</h3>
+  <h3>Our website: {{selectedCompany().company.companyWebsite}}</h3>
+  } @else {
+  <h2>Company not found</h2>
+  }
 </div>

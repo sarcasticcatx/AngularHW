@@ -1,22 +1,6 @@
-<div class="panel-containers">
-  <h2>
-    Information Panel
-    <h3>Available Jobs: {{ totsJobsLength }}</h3>
+<div class="container-two">
+  <div class="panel-containers">
     <h3>Applied Jobs: {{ totalAppliedJobs() }}</h3>
-  </h2>
-  <div>
-    <app-applied-job-list />
-  </div>
-  <h2>Sorting Panel</h2>
-  <button (click)="sortBySalary()"> from lowest to highest</button>
-
-  <h2> </h2>
-  <select (change)="sortByWorkType($event)">
-    <option value=""> choose a work type of ur choice</option>
-    <option [value]="workTypeStatus.HYBRID">Hybrid</option>
-    <option [value]="workTypeStatus.REMOTE">Remote</option>
-    <option [value]="workTypeStatus.ON_SITE">On Site</option>
-  </select>
+    <div>
+      <app-applied-job-list />
 </div>
-<!-- but then koa kje odberes edno go pokazhuva ama posle koa kje sakas da smenis u drugo
-vraka prazna niza i pak istoto da go kliknes vrakja prazna niza -->

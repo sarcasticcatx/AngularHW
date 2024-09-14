@@ -1,225 +1,59 @@
-.container {
+.container-first {
   max-width: 800px; 
-  margin: auto;
+  margin: 10px;
   padding: 20px;
   border-radius: 8px;
-  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  background-color: #c4c4;
 }
 
-.container h2, .container h3 {
-  margin: 0 0 10px;
-}
-
-
-.container h2 {
+.container-first h2 {
   font-size: 30px;
-  color: #333;
-  border-bottom: 2px solid #ddd;
+  font-style: italic;
+  color: #5c4d4d;
+  border-bottom: 2px solid #ac9696;
   padding-bottom: 10px;
 }
 
 
-.container h3 {
+.container-first h3 {
   font-size: 18px;
-  color: #555;
-  margin: 5px 0;
+  color: #2b1c1c;
+  font-weight: 100;
 }
 
 
-.apply-cancel-button {
+apply-cancel-button {
   display: inline-block;
-  margin: 10px 5px;
+ margin-right: 5px;
+ margin-top: 10px;
+ padding: 5px;
+ border-radius: 5px;
+ cursor: pointer; 
 }
-
-.apply-cancel-button button {
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease;
-}
-
-.apply-cancel-button button:hover {
-  opacity: 0.8;
-}
-
-
-// .apply-cancel-button.apply button {
-//   background-color: yellow;
-//   color: #000;
-// }
-
-// .apply-cancel-button.cancel button {
-//   background-color: green;
-//   color: #fff;
-// }
 
 
 .read-more-container {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f9f9f9;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f931;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+
+  h4 {
+ margin-top: 10px;
+  font-size: 18px;
+  color: #4b050580;   
+  }
 }
-
-.read-more-container h4 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #444;
-}
-
-
-.read-more {
-  display: none;
-}
-
-
-.read-more-container.open .read-more {
-  display: block;
-}
-
 
 p {
-  margin: 0;
-  padding: 5px 0;
-  color: #8f1717;
-}
-
-
-@media (max-width: 600px) {
-  .container {
-    padding: 10px;
-  }
-
-  .container h2 {
-    font-size: 24px;
-  }
-
-  .container h3 {
-    font-size: 16px;
-  }
-
-  .apply-cancel-button button {
-    font-size: 14px;
-  }
+  font-size: 18px;
+  color: #2b1c1c;
+ 
 }
 
 
 
-
-// /* Container Styling */
-// .container {
-//   flex: 1; /* Allows containers to grow and shrink as needed */
-//   max-width: calc(50% - 20px); /* Ensures containers take up half the width minus the gap */
-//   margin: auto;
-//   padding: 20px;
-//   border-radius: 8px;
-//   background-color: #ffffff;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   overflow: hidden;
-// }
-// .second-container {
-//   max-width: 800px; 
-//   margin: auto;
-//   padding: 20px;
-//   border-radius: 8px;
-//   background-color: #ffffff;
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//   overflow: hidden;
-// }
-
-// .container h2, .container h3 {
-//   margin: 0 0 10px;
-// }
-
-// .container h2 {
-//   font-size: 30px;
-//   color: #333;
-//   border-bottom: 2px solid #ddd;
-//   padding-bottom: 10px;
-// }
-
-// .container h3 {
-//   font-size: 18px;
-//   color: #555;
-//   margin: 5px 0;
-// }
-
-// .apply-cancel-button {
-//   display: inline-block;
-//   margin: 10px 5px;
-// }
-
-// .apply-cancel-button button {
-//   padding: 10px 20px;
-//   border-radius: 4px;
-//   font-size: 16px;
-//   color: #fff;
-//   cursor: pointer;
-//   border: none;
-//   transition: background-color 0.3s ease;
-// }
-
-// .apply-cancel-button button:hover {
-//   opacity: 0.8;
-// }
-
-// /* Read More Container Styling */
-// .read-more-container {
-//   margin-top: 20px;
-//   padding: 15px;
-//   background-color: #f9f9f9;
-//   border-radius: 8px;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//   cursor: pointer;
-// }
-
-// .read-more-container h4 {
-//   margin-top: 0;
-//   font-size: 20px;
-//   color: #444;
-// }
-
-// .read-more {
-//   display: none;
-// }
-
-// .read-more-container.open .read-more {
-//   display: block;
-// }
-
-// p {
-//   margin: 0;
-//   padding: 5px 0;
-//   color: #8f1717;
-// }
-
-// @media (max-width: 600px) {
-//   .main-container {
-//     flex-direction: column; /* Stack containers vertically on small screens */
-//   }
-
-//   .container {
-//     max-width: 100%; /* Full width on small screens */
-//     margin: 0;
-//     padding: 10px;
-//   }
-
-//   .container h2 {
-//     font-size: 24px;
-//   }
-
-//   .container h3 {
-//     font-size: 16px;
-//   }
-
-//   .apply-cancel-button button {
-//     font-size: 14px;
-//   }
-// }

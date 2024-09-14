@@ -3,10 +3,12 @@ import { JobApplication, WorkType } from './job.model';
 export const JobsMock: JobApplication[] = [
   {
     id: 1,
-    company:     {
+    company: {
       companyName: 'Tech Innovators Inc.',
       owners: 'Alice Johnson',
-      email: 'contact@techinnovators.com'
+      email: 'contact@techinnovators.com',
+      companyAdress: '123 Innovation Drive, San Francisco, CA',
+      companyWebsite: 'https://www.techinnovators.com',
     },
     expires: '2024-09-30',
     position: 'Software Engineer',
@@ -19,14 +21,15 @@ export const JobsMock: JobApplication[] = [
     description:
       'Develop and maintain high-performance software applications. Collaborate with cross-functional teams to deliver innovative solutions.',
     isApplied: false,
-
   },
   {
     id: 2,
-    company:   {
+    company: {
       companyName: 'Creative Solutions Ltd.',
       owners: 'Bob Smith',
-      email: 'info@creativesolutions.com'
+      email: 'info@creativesolutions.com',
+      companyAdress: '456 Creative Blvd, New York, NY',
+      companyWebsite: 'https://www.creativesolutions.com',
     },
     expires: '2024-10-15',
     position: 'Graphic Designer',
@@ -39,14 +42,15 @@ export const JobsMock: JobApplication[] = [
     description:
       'Create visual concepts for branding and marketing materials. Work with clients to understand their design needs and deliver compelling visuals.',
     isApplied: false,
-   
   },
   {
     id: 3,
     company: {
       companyName: 'GreenTech Solutions',
       owners: 'Carol Davis',
-      email: 'support@greentechsolutions.com'
+      email: 'support@greentechsolutions.com',
+      companyAdress: '789 Greenway, Seattle, WA',
+      companyWebsite: 'https://www.greentechsolutions.com',
     },
     expires: '2024-11-01',
     position: 'Environmental Scientist',
@@ -65,7 +69,10 @@ export const JobsMock: JobApplication[] = [
     company: {
       companyName: 'Global Finance Group',
       owners: 'David Wilson',
-      email: 'inquiries@globalfinancegroup.com'
+      email: 'inquiries@globalfinancegroup.com',
+
+      companyAdress: '789 Finance St, London, UK',
+      companyWebsite: 'https://www.globalfinancegroup.com',
     },
     expires: '2024-10-20',
     position: 'Financial Analyst',
@@ -80,10 +87,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 5,
-    company:  {
+    company: {
       companyName: 'HealthCare Dynamics',
       owners: 'Eve Thompson',
-      email: 'contact@healthcaredynamics.com'
+      email: 'contact@healthcaredynamics.com',
+
+      companyAdress: '123 HealthCare Ave, Toronto, Canada',
+      companyWebsite: 'https://www.healthcaredynamics.com',
     },
     expires: '2024-09-25',
     position: 'Registered Nurse',
@@ -95,14 +105,16 @@ export const JobsMock: JobApplication[] = [
     description:
       'Provide patient care, administer medications, and collaborate with doctors to develop treatment plans.',
     isApplied: false,
- 
   },
   {
     id: 6,
-    company:  {
+    company: {
       companyName: 'Innovate Marketing',
       owners: 'Frank Harris',
-      email: 'hello@innovatemarketing.com'
+      email: 'hello@innovatemarketing.com',
+
+      companyAdress: '456 Marketing Rd, Berlin, Germany',
+      companyWebsite: 'https://www.innovatemarketing.com',
     },
     expires: '2024-12-01',
     position: 'Digital Marketing Specialist',
@@ -117,10 +129,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 7,
-    company:  {
+    company: {
       companyName: 'Elite Consulting',
       owners: 'Grace Clark',
-      email: 'consult@eliteconsulting.com'
+      email: 'consult@eliteconsulting.com',
+
+      companyAdress: '789 Consulting St, Sydney, Australia',
+      companyWebsite: 'https://www.eliteconsulting.com',
     },
     expires: '2024-11-30',
     position: 'Management Consultant',
@@ -135,10 +150,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 8,
-    company:  {
+    company: {
       companyName: 'NextGen Robotics',
       owners: 'Henry Lewis',
-      email: 'info@nextgenrobotics.com'
+      email: 'info@nextgenrobotics.com',
+
+      companyAdress: '123 Robotics Ln, Tokyo, Japan',
+      companyWebsite: 'https://www.nextgenrobotics.com',
     },
     expires: '2024-10-05',
     position: 'Robotics Engineer',
@@ -154,10 +172,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 9,
-    company:  {
+    company: {
       companyName: 'Horizon Pharmaceuticals',
       owners: 'Ivy Walker',
-      email: 'research@horizonpharma.com'
+      email: 'research@horizonpharma.com',
+
+      companyAdress: '456 Pharma Blvd, Boston, MA, USA',
+      companyWebsite: 'https://www.horizonpharma.com',
     },
     expires: '2024-11-15',
     position: 'Research Scientist',
@@ -172,10 +193,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 10,
-    company:  {
+    company: {
       companyName: 'Future Technologies',
       owners: 'Jack Moore',
-      email: 'contact@futuretechnologies.com'
+      email: 'contact@futuretechnologies.com',
+
+      companyAdress: '789 Tech St, Vancouver, Canada',
+      companyWebsite: 'https://www.futuretechnologies.com',
     },
     expires: '2024-10-10',
     position: 'Data Scientist',
@@ -191,10 +215,13 @@ export const JobsMock: JobApplication[] = [
   },
   {
     id: 11,
-    company:  {
+    company: {
       companyName: 'SmartBuild Construction',
       owners: 'Kathy Adams',
-      email: 'info@smartbuildconstruction.com'
+      email: 'info@smartbuildconstruction.com',
+
+      companyAdress: '123 Build St, Dubai, UAE',
+      companyWebsite: 'https://www.smartbuildconstruction.com',
     },
     expires: '2024-12-20',
     position: 'Civil Engineer',

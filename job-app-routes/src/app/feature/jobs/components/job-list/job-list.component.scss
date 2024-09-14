@@ -1,0 +1,61 @@
+.available-job {
+  border-bottom: 2px solid #ddd;
+
+  h3 {
+     text-align: center;
+      font-style: italic;
+      font-size: 25px;
+      color:#6654c0a1;
+   
+  }
+ 
+}
+
+.sort-panel h2 {
+    font-size: 28px;
+    color: #6654c0a1;
+    margin:15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-size: 25px;
+    text-align: end;
+}
+
+.sort-panel button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ca9ec1; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+    float: right;
+}
+
+.sort-panel select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+   margin: 20px;
+    width: 11%;
+    box-sizing: border-box; 
+    float: right;
+
+}
+
+.search {
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+
+  .search-box {
+    font-size: 20px;
+    padding: 5px;
+    border: 2px solid pink;
+    border-radius: 5px;
+  }
+}

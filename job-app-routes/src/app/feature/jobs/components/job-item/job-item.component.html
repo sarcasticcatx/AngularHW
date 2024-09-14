@@ -1,9 +1,11 @@
- <main>
-  <section class="container">
+<main>
+  <section class="container-first">
     <h2 style="font-size: 30px">
       {{ this.jobs()?.position || "no position required" }}
     </h2>
-    <h3 style="cursor: pointer;" (click)="onCompanySelect(jobs())">Company: {{ jobs()?.company.companyName || "no company required" }}</h3>
+    <h3 style="cursor: pointer" (click)="onCompanySelect(jobs(), jobs().id)">
+      Company: {{ jobs()?.company.companyName || "no company required" }}
+    </h3>
 
     <h3>Expires: {{ jobs()?.expires | date : "fullDate" }}</h3>
 
@@ -12,7 +14,7 @@
       {{ jobs()?.startingSalary | currency : "EUR" || "no salary available" }}
     </h3>
     <h3>Work type: {{ jobs().workType }}</h3>
-    <p>Applied : {{jobs().isApplied}}</p>
+    <p style="color:rgb(141, 5, 5); " >Applied : {{ jobs().isApplied }}</p>
 
     <div
       appToggleReadMore
@@ -32,17 +34,13 @@
     <apply-cancel-button
       (btnClick)="onClickApply('Apply')"
       text="Apply"
-      [style]="{ backgroundColor: '#b8b8b8', fontSize: '20px', border: 'none' }" 
+      [style]="{ backgroundColor: '#b8b8b8', fontSize: '20px', border: 'none'}"
     />
     <apply-cancel-button
-    (btnClick)="onClickCancel('Cancel')"
+      (btnClick)="onClickCancel('Cancel')"
       text="Cancel"
       [style]="{ backgroundColor: '#45B0D2', fontSize: '20px', border: 'none', }"
-      /> 
-   
+    />
   </section>
- 
-  
 </main>
 
- 
