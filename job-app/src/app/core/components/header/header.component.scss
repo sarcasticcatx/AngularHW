@@ -1,16 +1,16 @@
-/* Header Styling */
+
 .header {
-    max-width: 800px; /* Same as the card container */
+    max-width: 800px; 
     margin: auto;
     padding: 20px;
     background-color: #f8efef;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    text-align: center; /* Center align text */
-    margin-bottom: 20px; /* Space between header and content */
+    text-align: center; 
+    margin-bottom: 20px; 
   }
   
-  /* Main Heading Styling */
+
   .header h1 {
     font-size: 36px;
     color: #333;
@@ -20,7 +20,7 @@
     padding-bottom: 10px;
   }
   
-  /* Ensure consistent styling for the job panel component */
+  
   app-job-panel {
     display: block;
   }

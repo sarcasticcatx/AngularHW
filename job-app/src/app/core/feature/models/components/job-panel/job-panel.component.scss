@@ -1,4 +1,3 @@
-/* Panel Container Styling */
 .panel-containers {
     max-width: 800px; 
     margin: auto;
@@ -38,11 +37,7 @@
     margin: 10px 0;
   }
   
-  .panel-containers button:hover {
-    background-color: #0056b3; 
-  }
-  
-  /* Select Styling */
+ 
   .panel-containers select {
     padding: 10px;
     font-size: 16px;
@@ -62,27 +57,4 @@
   }
   
 
-  @media (max-width: 600px) {
-    .panel-containers {
-      padding: 15px;
-    }
-  
-    .panel-containers h2 {
-      font-size: 24px;
-    }
-  
-    .panel-containers h3 {
-      font-size: 16px;
-    }
-  
-    .panel-containers button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  
-    .panel-containers select {
-      font-size: 14px;
-      padding: 8px;
-    }
-  }
-  
+ 
