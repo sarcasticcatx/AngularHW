@@ -1,6 +1,12 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { JobApplication } from '../../feature/jobs/models/job.model';
+import {
+  JobApplication,
+  JobsFormValue,
+} from '../../feature/jobs/models/job.model';
 import { JobsMock } from '../../feature/jobs/models/job.mock';
+import { Router } from '@angular/router';
+import { JobFormComponent } from '../../feature/jobs/components/job-form/job-form.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +16,13 @@ export class JobService {
   jobs = signal<JobApplication[]>(JobsMock);
 
   jobSelection = signal<JobApplication>(null);
+
+  jobForm = signal<JobsFormValue>(null);
+  private router = inject(Router);
+  
+  // newJobForm: JobsFormValue[] = [];
+  // job: JobApplication[] = []
+  
 
   selectedCompany = signal<JobApplication>(null);
 
@@ -22,6 +35,38 @@ export class JobService {
   getJobById(id: number) {
     return this.jobs().find((job) => job.id === id);
   }
+
+
+  onAddJob(value: JobsFormValue) {
+    const addJob: JobApplication = {
+      id: this.jobSelection().id,
+      company: {
+        companyName: value.company.companyName,
+        owner: value.company.owner,
+        email: value.company.email,
+        companyAdress: value.company.companyAdress,
+        companyWebsite: value.company.companyWebsite,
+      },
+      expires: value.expires,
+      position: value.position,
+      startingSalary: value.startingSalary,
+      workType: value.workType,
+      location: value.location,
+      country: value.country,
+      qualifications: value.qualifications,
+      description: value.description,
+      isApplied: value.isApplied,
+    };
+  
+    this.jobs.update(prevJob => [...prevJob, addJob])
+
+    this.jobForm.set(addJob)
+
+    console.log('added job to the list')
+  
+    this.router.navigate(['jobs'])
+  }
+
 
   //how many are applied to
   totalAppliedJobs = computed(
@@ -81,5 +126,3 @@ export class JobService {
     );
   }
 }
-
-

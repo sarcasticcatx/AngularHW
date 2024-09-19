@@ -16,4 +16,4 @@ export class HeaderComponent implements OnInit {
     this.loggerService.logDetails('Header');
   }
 }
-//RouterLink is used to create links that route in angular and RouterLinkActive is used to apply css classes on active routes
+

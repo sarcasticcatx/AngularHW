@@ -1,16 +1,25 @@
 <header class="header">
-  <h1>Job Seeker  </h1>
- 
+  <h1>Job Seeker</h1>
+
   <div>
     <nav>
       <li>
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> Home </a>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          Home
+        </a>
       </li>
       <li>
         <a routerLink="/jobs" routerLinkActive="active">Jobs</a>
       </li>
       <li>
         <a routerLink="/profile" routerLinkActive="active">My Profile</a>
+      </li>
+      <li>
+        <a routerLink="/add-job" routerLinkActive="active">Add New Job</a>
       </li>
     </nav>
   </div>
