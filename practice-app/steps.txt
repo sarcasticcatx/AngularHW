@@ -1,9 +1,0 @@
-1. make header component , make html, css and import the component vo app.commontent
-2. a potoa povikaj go so selectorot vo app.component html
-3. create in this case the cards and import in app.ts and selectorot vo app.html
-4. make a model and then a json list ama toa mozhe i prvo next time
-5.fix css a bit to make it more good looking
-6. insert pipes and costum pipes
-
-..
-pipes se funkcii koi primaat vrednost i vrakjaat transformirana vrednost 
