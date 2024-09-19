@@ -25,7 +25,7 @@ export class JobListComponent implements OnInit {
 
   workTypeStatus = WorkType;
 
-  totalAppliedJobs = inject(JobService).totalAppliedJobs;
+  totalAppliedJobs = this.jobsService.totalAppliedJobs;
 
 
   jobs = computed(() =>

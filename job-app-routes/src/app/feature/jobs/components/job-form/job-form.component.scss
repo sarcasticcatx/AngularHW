@@ -1,0 +1,63 @@
+form {
+  background-color: pink;
+  padding: 30px;
+  border-radius: 5px;
+  width: 500px;
+
+  .form-group {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 20px;
+  }
+
+  label {
+    font-size: 1.3rem;
+    margin: 5px;
+    font-style: oblique;
+  }
+
+  input {
+    border: 2px solid transparent;
+  }
+
+  input.ng-touched.ng-invalid {
+    border: 2px solid rebeccapurple;
+  }
+
+  textarea.ng-touched.ng-invalid {
+    border: 2px solid rebeccapurple;
+  }
+
+  .form-input {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    box-shadow: 0 10px 20px #dfb0e0, 0 6px 6px #ebaee8;
+  }
+}
+
+.control-error {
+  margin: 0;
+  padding-bottom: 10px;
+  color: rebeccapurple;
+}
+
+.form-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.form-error {
+  text-align: center;
+  color: rebeccapurple;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+

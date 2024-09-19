@@ -1,0 +1,88 @@
+<form [formGroup]="jobsForm" (ngSubmit)="onFormSubmit()">
+  <div class="form-group">
+    <label>Position</label>
+    <input type="text" class="form-input" formControlName="position" />
+  </div>
+  <!-- <div class="form-group">
+    <h3>Company Information</h3>
+    <div formGroupName="company">
+      <label>Company name</label>
+      <input type="text" class="form-input" formControlName="companyName" />
+      <div class="form-group">
+        <label>Owners</label>
+        <input type="text" class="form-input" formControlName="owner" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-input" formControlName="email" />
+      </div>
+      <div class="form-group">
+        <label>Company Address</label>
+        <input
+          type="text"
+          class="form-input"
+          formControlName="companyAdress"
+        />
+      </div>
+      <div class="form-group">
+        <label>Company Website</label>
+        <input
+          type="text"
+          class="form-input"
+          formControlName="companyWebsite"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Expires</label>
+    <input type="date" class="form-input" formControlName="expires" />
+  </div>
+  <div class="form-group">
+    <label>Starting Salary</label>
+    <input type="number" class="form-input" formControlName="startingSalary" />
+  </div>
+  <p *ngIf="jobsForm.controls.startingSalary.errors?.min" class="control-error">
+    Salary must be over 0
+  </p>
+  <div class="form-group">
+    <label>Work Type</label>
+    <select class="form-input" formControlName="workType">
+      <option value="default" [disabled]="true">select which type</option>
+      <option *ngFor="let type of workTypes | keyvalue" [value]="type.key">
+        {{ type.value }}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Location</label>
+    <input type="text" class="form-input" formControlName="location" />
+  </div>
+  <div class="form-group">
+    <label>Country</label>
+    <input type="text" class="form-input" formControlName="country" />
+  </div> -->
+  <div class="form-group">
+    <label>Qualifications</label>
+    <input type="text" class="form-input" formControlName="qualifications" />
+  </div>
+  <div class="form-group">
+    <label>Description</label>
+    <input type="text" class="form-input" formControlName="description" />
+  </div>
+  <div
+    *ngIf="jobSubmitted() && jobsForm.invalid && jobsForm.touched"
+    class="form-error"
+  >
+    <p>All Fields are required</p>
+  </div>
+  <div class="form-controls">
+    <app-button
+      type="submit"
+      [style]="{ backgroundColor: '#b8b8b8', fontSize: '20px', border: 'none'}"
+      text="Add"
+     
+    ></app-button>
+  </div>
+</form>
